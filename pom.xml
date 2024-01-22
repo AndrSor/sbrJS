@@ -12,6 +12,7 @@
         <module>L01</module>
         <module>L07</module>
         <module>L08</module>
+        <module>L06</module>
     </modules>
 
     <dependencies>
@@ -34,7 +35,14 @@
             <version>5.2.0</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
+
 
 
 
