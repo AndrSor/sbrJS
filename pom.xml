@@ -13,6 +13,8 @@
         <module>L07</module>
         <module>L08</module>
         <module>L06</module>
+        <module>L04</module>
+        <module>L09</module>
     </modules>
 
     <dependencies>

@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Test;
 
 public class MarkedClassTest {
@@ -5,11 +6,14 @@ public class MarkedClassTest {
     public void myMark_implementation_markedClass(){
         MarkedClass markedClass = new MarkedClass();
         NonMarkedClass nonMarkedClass = new NonMarkedClass();
-        //test(markedClass);
+        //String res1 = test(markedClass);
+        Assert.assertTrue(test(markedClass));
+        Assert.assertTrue(test(markedClass));
+
     }
 
-    static String test(MyMark markedObject) {
-        return "Метод 'Test' успешно завершен!";
+    static boolean test(MyMark markedObject) {
+        return true;
     }
 
 }
