@@ -12,7 +12,6 @@ public class Main {
         System.out.println("Введите URL страницы");
         url = scanner.next();
 
-        //System.out.println(url);
         try {
             System.out.println(getHTMLFromUrl(url));
         } catch (BrowsPageExeption e) {
