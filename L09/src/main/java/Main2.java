@@ -9,10 +9,10 @@ public class Main2 {
                 new Person("Наталья", 13),
                 new Person("Константин", 30)}));
 
-        Person person = new Person("Валера",18); 
+        Person person = new Person("Валера",18);
         
         //someCollection.add(new Person("Андрей",46));
-        boolean add = someCollection.add(person);
+        someCollection.add(person)
 
         someCollection.stream()
                 .forEach(person -> System.out.println(person.getName()));
