@@ -6,21 +6,27 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Main {
+    private static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) throws BrowsPageExeption {
-        Scanner scanner = new Scanner(System.in);
-        String url;
+
+
+
+        do {
+            try {
+                System.out.println(getHTMLFromUrl(getUserUrl() ));
+            } catch (BrowsPageExeption e) {
+                //System.out.println("BrowsPageExeption");
+                e.printStackTrace();
+            }
+            System.out.println("Запросить еще стратницу? (Y/N)");
+            //String makeNextQuery = ;
+        } while(scanner.next().equalsIgnoreCase("Y"));
+    }
+
+    public static String getUserUrl() {
+        System.out.println();
         System.out.println("Введите URL страницы");
-        url = scanner.next();
-
-        try {
-            System.out.println(getHTMLFromUrl(url));
-        } catch (BrowsPageExeption e) {
-            System.out.println("BrowsPageExeption");
-        } catch (IOException e){
-            System.out.println("IOException");
-        }
-
-
+        return scanner.next();
     }
 
 
@@ -38,7 +44,7 @@ public class Main {
                 stringBuilder.append(inputLine);
             in.close();
         }catch (IOException e){
-            throw new BrowsPageExeption(e);
+            throw new BrowsPageExeption("Ошибка при попытке получения страницы");
         }
             //stringBuilder.append(System.getProperty("line.separator"));
 
