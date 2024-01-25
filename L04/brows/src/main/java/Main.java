@@ -9,8 +9,6 @@ public class Main {
     private static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) throws BrowsPageExeption {
 
-
-
         do {
             try {
                 System.out.println(getHTMLFromUrl(getUserUrl() ));
@@ -28,8 +26,6 @@ public class Main {
         System.out.println("Введите URL страницы");
         return scanner.next();
     }
-
-
 
     public static String getHTMLFromUrl(String url) throws BrowsPageExeption {
         StringBuilder stringBuilder = new StringBuilder();
