@@ -16,6 +16,7 @@ public class Main2 {
 
         someCollection.stream()
                 .forEach(person -> System.out.println(person.getName()));
+        //Test
     }
 
 
